@@ -1,0 +1,687 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PSI</name>
+    </assembly>
+    <members>
+        <member name="T:PSI.Cacher">
+            <summary>
+            Logique d'interaction pour Cacher.xaml
+            </summary>
+            <summary>
+            Cacher
+            </summary>
+        </member>
+        <member name="M:PSI.Cacher.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:PSI.Deformation">
+            <summary>
+            Logique d'interaction pour Deformation.xaml
+            </summary>
+            <summary>
+            Deformation
+            </summary>
+        </member>
+        <member name="M:PSI.Deformation.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:PSI.Filtre">
+            <summary>
+            Logique d'interaction pour Filtre.xaml
+            </summary>
+            <summary>
+            Filtre
+            </summary>
+        </member>
+        <member name="M:PSI.Filtre.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:PSI.Fractale">
+            <summary>
+            Logique d'interaction pour Fractale.xaml
+            </summary>
+            <summary>
+            Fractale
+            </summary>
+        </member>
+        <member name="M:PSI.Fractale.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:PSI.GenericGF">
+            <summary>
+              <p>This class contains utility methods for performing mathematical operations over
+            the Galois Fields. Operations use a given primitive polynomial in calculations.</p>
+              <p>Throughout this package, elements of the GF are represented as an {@code int}
+            for convenience and speed (but at the cost of memory).
+              </p>
+            </summary>
+            <author>Sean Owen</author>
+        </member>
+        <member name="M:PSI.GenericGF.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Create a representation of GF(size) using the given primitive polynomial.
+            </summary>
+            <param name="primitive">irreducible polynomial whose coefficients are represented by
+            *  the bits of an int, where the least-significant bit represents the constant
+            *  coefficient</param>
+            <param name="size">the size of the field</param>
+            <param name="genBase">the factor b in the generator polynomial can be 0- or 1-based
+            *  (g(x) = (x+a^b)(x+a^(b+1))...(x+a^(b+2t-1))).
+            *  In most cases it should be 1, but for QR code it is 0.</param>
+        </member>
+        <member name="M:PSI.GenericGF.BuildMonomial(System.Int32,System.Int32)">
+            <summary>
+            Builds the monomial.
+            </summary>
+            <param name="degree">The degree.</param>
+            <param name="coefficient">The coefficient.</param>
+            <returns>the monomial representing coefficient * x^degree</returns>
+        </member>
+        <member name="M:PSI.GenericGF.AddOrSubtract(System.Int32,System.Int32)">
+            <summary>
+            Implements both addition and subtraction -- they are the same in GF(size).
+            </summary>
+            <returns>sum/difference of a and b</returns>
+        </member>
+        <member name="M:PSI.GenericGF.Exp(System.Int32)">
+            <summary>
+            Exps the specified a.
+            </summary>
+            <returns>2 to the power of a in GF(size)</returns>
+        </member>
+        <member name="M:PSI.GenericGF.Log(System.Int32)">
+            <summary>
+            Logs the specified a.
+            </summary>
+            <param name="a">A.</param>
+            <returns>base 2 log of a in GF(size)</returns>
+        </member>
+        <member name="M:PSI.GenericGF.Inverse(System.Int32)">
+            <summary>
+            Inverses the specified a.
+            </summary>
+            <returns>multiplicative inverse of a</returns>
+        </member>
+        <member name="M:PSI.GenericGF.Multiply(System.Int32,System.Int32)">
+            <summary>
+            Multiplies the specified a with b.
+            </summary>
+            <param name="a">A.</param>
+            <param name="b">The b.</param>
+            <returns>product of a and b in GF(size)</returns>
+        </member>
+        <member name="P:PSI.GenericGF.Size">
+            <summary>
+            Gets the size.
+            </summary>
+        </member>
+        <member name="P:PSI.GenericGF.GeneratorBase">
+            <summary>
+            Gets the generator base.
+            </summary>
+        </member>
+        <member name="M:PSI.GenericGF.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:PSI.GenericGFPoly">
+            <summary>
+            <p>Represents a polynomial whose coefficients are elements of a GF.
+            Instances of this class are immutable.</p>
+            <p>Much credit is due to William Rucklidge since portions of this code are an indirect
+            port of his C++ Reed-Solomon implementation.</p>
+            </summary>
+            <author>Sean Owen</author>
+        </member>
+        <member name="M:PSI.GenericGFPoly.#ctor(PSI.GenericGF,System.Int32[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:PSI.GenericGFPoly"/> class.
+            </summary>
+            <param name="field">the {@link GenericGF} instance representing the field to use
+            to perform computations</param>
+            <param name="coefficients">coefficients as ints representing elements of GF(size), arranged
+            from most significant (highest-power term) coefficient to least significant</param>
+            <exception cref="T:System.ArgumentException">if argument is null or empty,
+            or if leading coefficient is 0 and this is not a
+            constant polynomial (that is, it is not the monomial "0")</exception>
+        </member>
+        <member name="P:PSI.GenericGFPoly.Degree">
+            <summary>
+            degree of this polynomial
+            </summary>
+        </member>
+        <member name="P:PSI.GenericGFPoly.IsZero">
+            <summary>
+            Gets a value indicating whether this <see cref="T:PSI.GenericGFPoly"/> is zero.
+            </summary>
+            <value>true iff this polynomial is the monomial "0"</value>
+        </member>
+        <member name="M:PSI.GenericGFPoly.GetCoefficient(System.Int32)">
+            <summary>
+            coefficient of x^degree term in this polynomial
+            </summary>
+            <param name="degree">The degree.</param>
+            <returns>coefficient of x^degree term in this polynomial</returns>
+        </member>
+        <member name="M:PSI.GenericGFPoly.EvaluateAt(System.Int32)">
+            <summary>
+            evaluation of this polynomial at a given point
+            </summary>
+            <param name="a">A.</param>
+            <returns>evaluation of this polynomial at a given point</returns>
+        </member>
+        <member name="T:PSI.Histogramme">
+            <summary>
+            Logique d'interaction pour Histogramme.xaml
+            </summary>
+            <summary>
+            Histogramme
+            </summary>
+        </member>
+        <member name="M:PSI.Histogramme.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:PSI.Nuances">
+            <summary>
+            Logique d'interaction pour Nuances.xaml
+            </summary>
+            <summary>
+            Nuances
+            </summary>
+        </member>
+        <member name="M:PSI.Nuances.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:PSI.QrCode">
+            <summary>
+            Logique d'interaction pour QrCode.xaml
+            </summary>
+            <summary>
+            QrCode
+            </summary>
+        </member>
+        <member name="M:PSI.QrCode.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:PSI.ReedSolomonAlgorithm.Encode(System.Byte[],System.Int32,PSI.ErrorCorrectionCodeType)">
+            <summary>
+            Produces error correction codewords for a message using the Reed-Solomon algorithm.
+            </summary>
+            <param name="message">The message to compute the error correction codewords.</param>
+            <param name="eccCount">The number of error correction codewords desired.</param>
+            <param name="eccType">The type of Galois field to use to encode error correction codewords.</param>
+            <returns>Returns the computed error correction codewords.</returns>
+        </member>
+        <member name="M:PSI.ReedSolomonAlgorithm.Encode(System.Byte[],System.Int32)">
+            <summary>
+            Produces error correction codewords for a message using the Reed-Solomon algorithm.
+            </summary>
+            <param name="message">The message to compute the error correction codewords.</param>
+            <param name="eccCount">The number of error correction codewords desired.</param>
+            <returns>Returns the computed error correction codewords.</returns>
+        </member>
+        <member name="M:PSI.ReedSolomonAlgorithm.Decode(System.Byte[],System.Byte[],PSI.ErrorCorrectionCodeType)">
+            <summary>
+            Repairs a possibly broken message using the Reed-Solomon algorithm.
+            </summary>
+            <param name="message">The possibly broken message to repair.</param>
+            <param name="ecc">The available error correction codewords.</param>
+            <param name="eccType">The type of Galois field to use to decode message.</param>
+            <returns>Returns the repaired message, or null if it cannot be repaired.</returns>
+        </member>
+        <member name="M:PSI.ReedSolomonAlgorithm.Decode(System.Byte[],System.Byte[])">
+            <summary>
+            Repairs a possibly broken message using the Reed-Solomon algorithm.
+            </summary>
+            <param name="message">The possibly broken message to repair.</param>
+            <param name="ecc">The available error correction codewords.</param>
+            <returns>Returns the repaired message, or null if it cannot be repaired.</returns>
+        </member>
+        <member name="T:PSI.ReedSolomonDecoder">
+            <summary> <p>Implements Reed-Solomon decoding, as the name implies.</p>
+            
+            <p>The algorithm will not be explained here, but the following references were helpful
+            in creating this implementation:</p>
+            
+            <ul>
+            <li>Bruce Maggs.
+            <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/project/pscico-guyb/realworld/www/rs_decode.ps">
+            "Decoding Reed-Solomon Codes"</a> (see discussion of Forney's Formula)</li>
+            <li>J.I. Hall. <a href="www.mth.msu.edu/~jhall/classes/codenotes/GRS.pdf">
+            "Chapter 5. Generalized Reed-Solomon Codes"</a>
+            (see discussion of Euclidean algorithm)</li>
+            </ul>
+            
+            <p>Much credit is due to William Rucklidge since portions of this code are an indirect
+            port of his C++ Reed-Solomon implementation.</p>
+            
+            </summary>
+            <author>Sean Owen</author>
+            <author>William Rucklidge</author>
+            <author>sanfordsquires</author>
+        </member>
+        <member name="M:PSI.ReedSolomonDecoder.Decode(System.Int32[],System.Int32)">
+            <summary>
+              <p>Decodes given set of received codewords, which include both data and error-correction
+            codewords. Really, this means it uses Reed-Solomon to detect and correct errors, in-place,
+            in the input.</p>
+            </summary>
+            <param name="received">data and error-correction codewords</param>
+            <param name="twoS">number of error-correction codewords available</param>
+            <returns>false: decoding fails</returns>
+        </member>
+        <member name="T:PSI.ReedSolomonEncoder">
+            <summary>
+            Implements Reed-Solomon encoding, as the name implies.
+            </summary>
+            <author>Sean Owen</author>
+            <author>William Rucklidge</author>
+        </member>
+        <member name="T:PSI.App">
+            <summary>
+            Logique d'interaction pour App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:PSI.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:PSI.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:PSI.MainWindow">
+            <summary>
+            Logique d'interaction pour MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:PSI.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:PSI.MyImage.#ctor">
+            <summary>
+            Constructeur qui crée une nouvelle instance de MyImage vide
+            </summary>
+        </member>
+        <member name="M:PSI.MyImage.#ctor(System.String)">
+            <summary>
+            Constructeur qui crée une nouvelle instance de MyImage à partir du nom de fichier de l'image choisie
+            </summary>
+            <param name="myfile"> String contenant le nom du fichier </param>
+        </member>
+        <member name="M:PSI.MyImage.#ctor(System.Int32,System.Int32,System.Int32,PSI.Pixel[0:,0:])">
+            <summary>
+            Constructeur qui crée une nouvelle instance de MyImage à partir de dfférents paramètres la caractérisant
+            </summary>
+            <param name="taille"> Entier qui stock la taille en octets de l'image </param>
+            <param name="largeur"> Entier qui stock la largeur de l'image </param>
+            <param name="hauteur"> Entier qui stock la hauteur de l'image </param>
+            <param name="matImage"> Entier qui sotck la matrice de pixels de l'image </param>
+        </member>
+        <member name="M:PSI.MyImage.From_Image_To_File">
+            <summary>
+            Fonction qui permet de reconvertir l'instance de MyImage en tableau de bytes pour sauvergarder une image
+            </summary>
+            <returns> Retourne un tableau de bytes contenant les informations de l'image </returns>
+        </member>
+        <member name="M:PSI.MyImage.NuanceDeGris">
+            <summary>
+            Fonction qui applique un filtre de nuances de gris sur l'instance de MyImage
+            </summary>
+            <returns> Retourne une nouvelle instance de MyImage en nuances de gris </returns>
+        </member>
+        <member name="M:PSI.MyImage.NuanceDeJaune">
+            <summary>
+            Fonction qui isole les pixels jaune sur l'instance de MyImage
+            </summary>
+            <returns> Retourne une nouvelle instance de MyImage avec isolation des pixels jaune et nuances de gris pour le reste </returns>
+        </member>
+        <member name="M:PSI.MyImage.NuanceDeBleu">
+            <summary>
+            Fonction qui isole les pixels bleu sur l'instance de MyImage
+            </summary>
+            <returns> Retourne une nouvelle instance de MyImage avec isolation des pixels bleu et nuances de gris pour le reste </returns>
+        </member>
+        <member name="M:PSI.MyImage.NuanceDeRouge">
+            <summary>
+            Fonction qui isole les pixels rouge sur l'instance de MyImage
+            </summary>
+            <returns> Retourne une nouvelle instance de MyImage avec isolation des pixels rouge et nuances de gris pour le reste </returns>
+        </member>
+        <member name="M:PSI.MyImage.NuanceDeVert">
+            <summary>
+            Fonction qui isole les pixels vert sur l'instance de MyImage
+            </summary>
+            <returns> Retourne une nouvelle instance de MyImage avec isolation des pixels vert et nuances de gris pour le reste </returns>
+        </member>
+        <member name="M:PSI.MyImage.NoirEtBlanc">
+            <summary>
+            Fonction qui applique un filtre de noir et blanc sur l'instance de MyImage
+            </summary>
+            <returns> Retourne une nouvelle instance de MyImage en nuances de gris </returns>
+        </member>
+        <member name="M:PSI.MyImage.EffetMiroir">
+            <summary>
+            Fonction qui applique un filtre d'effet miroir vertical sur l'instance de MyImage
+            </summary>
+            <returns> Retourne une nouvelle instance de MyImage en effet miroir </returns>
+        </member>
+        <member name="M:PSI.MyImage.Redimensionnement(System.Double)">
+            <summary>
+            Focntion qui redimensionne une image proportionnellement par rapport à un coefficient
+            </summary>
+            <param name="coeff"> cofficient par lequel la hauteur et largeur de l'image va être multipliée qui doit être > 0 </param>
+            <returns> Retourne une nouvelle instance de MyImage qui est redimensionnée </returns>
+        </member>
+        <member name="M:PSI.MyImage.ConvertCoeff4(System.Int32,System.Double)">
+            <summary>
+            Fonction qui prend la dimension et le coeff afin de retourner la nouvelle dimension au multiple de 4 le proche inférieur
+            </summary>
+            <param name="dimension"> dimension de l'instance de MyImage </param>
+            <param name="coeff"> coefficient qui sert à redimensionner l'image </param>
+            <returns> Retourne la nouvelle valeur de la dimension </returns>
+        </member>
+        <member name="M:PSI.MyImage.Rotation(System.Double)">
+            <summary>
+            Fonction qui fait une rotation d'image avec un angle quelconque
+            </summary>
+            <param name="angle"> angle de rotation de l'image </param>
+            <returns> Retourne une nouvelle instance de MyImage </returns>
+        </member>
+        <member name="M:PSI.MyImage.Convert4(System.Int32)">
+            <summary>
+            Fonction qui prend la dimension afin de retourner la nouvelle dimension au multiple de 4 le plus proche
+            </summary>
+            <param name="dimension"> dimension de l'instance de MyImage </param>
+            <returns> Retourne la nouvelle valeur de la dimension </returns>
+        </member>
+        <member name="M:PSI.MyImage.CalculKernel(System.Int32[0:,0:],System.Int32,System.Int32)">
+            <summary>
+            Fonction qui calcul la couleur du pixel en lui appliquant la matrice de kernel
+            </summary>
+            <param name="kernel"> Matrice de kernel qui contient les coefficients du filtre </param>
+            <param name="i"> Position du numéro de ligne du pixel </param>
+            <param name="j"> Position du numéro de colonne du pixel </param>
+            <returns> Retourne le pixel avec ses nouvelles valeurs de rouge, vert et bleu </returns>
+        </member>
+        <member name="M:PSI.MyImage.AppliquerFiltre(System.Int32[0:,0:])">
+            <summary>
+            Fonction qui applique le filtre de Kernel
+            </summary>
+            <param name="kernel"> Matrice de Kernel qui contient les différents coefficients des filtres </param>
+            <returns> Retourne une nouvelle instance de MyImage </returns>
+        </member>
+        <member name="M:PSI.MyImage.Fractale(System.Numerics.Complex,System.Numerics.Complex,System.String)">
+            <summary>
+            Fonction qui crée une fractale 
+            </summary>
+            <param name="c1"> Premier complexe de la fractale </param>
+            <param name="c2"> Deuxième complexe de la fractale </param>
+            <param name="name"> Nom de la fractale </param>
+            <returns> Retourne une instance de MyImage contenant une fractale </returns>
+        </member>
+        <member name="M:PSI.MyImage.Histogramme">
+            <summary>
+            Fonction qui crée l'histogramme d'une image
+            </summary>
+            <returns> Retourne une instance de MyImage contenant l'histogramme </returns>
+        </member>
+        <member name="M:PSI.MyImage.CoderImage(PSI.MyImage)">
+            <summary>
+            Fonction qui cache une image dans une 
+            </summary>
+            <param name="image2"> Image que l'on va cacher dans un autre </param>
+            <returns> Retourne une instance de MyImage contenant l'image cachée dans une autre </returns>
+        </member>
+        <member name="M:PSI.MyImage.DecoderImage">
+            <summary>
+            Fonction qui décode une image cachée dans une autre
+            </summary>
+            <returns> Retourne une instance de MyImage contenant l'image décodée </returns>
+        </member>
+        <member name="M:PSI.MyImage.Convertir_Endian_To_Int(System.Byte[])">
+            <summary>
+            Fonction qui convertit des données en little endian en entier
+            </summary>
+            <param name="tab"> tableau contenant les valeurs en little endian </param>
+            <returns> Retourne la valeur convertit en entier </returns>
+        </member>
+        <member name="M:PSI.MyImage.Convertir_Int_To_Endian(System.Int32,System.Int32)">
+            <summary>
+            Fonction qui convertit des données en entier en little endian
+            </summary>
+            <param name="val"> valeur en entier à convertir </param>
+            <param name="taille"> taille du tableau de byte de sortie </param>
+            <returns> Retourne la valeur convertit en little endian </returns>
+        </member>
+        <member name="M:PSI.MyImage.MatToTab">
+            <summary>
+            Fonction qui convertit la matrice de Pixels en tableau de bytes
+            </summary>
+            <returns> Retourne le tableau de bytes contenant les valeurs des pixels rouge, vert et bleu </returns>
+        </member>
+        <member name="M:PSI.MyImage.ConvertByteEnBase2(System.Byte)">
+            <summary>
+            Fonction qui convertit un byte en binaire
+            </summary>
+            <param name="b"> byte que l'on veut convertir </param>
+            <returns> Retourne la valeur du byte en binaire </returns>
+        </member>
+        <member name="M:PSI.MyImage.ConvertBase2EnByte(System.Int32[])">
+            <summary>
+            Fonction qui covnertit une valeur en binaire en byte
+            </summary>
+            <param name="tab"> tableau qui contient la valeur en binaire </param>
+            <returns> Retourne la valeur en byte du binaire </returns>
+        </member>
+        <member name="M:PSI.MyImage.GenerationQRchaine(System.String)">
+            <summary>
+            Méthode principale de la génération de QR code qui contient toutes les autres sous fonctions 
+            </summary>
+            <param name="text"> Le message qu'on voudra convertir </param>
+            <returns> Une liste de byte qui contiendra toute la chaine de bits </returns>
+        </member>
+        <member name="M:PSI.MyImage.AddTabtoList(System.Collections.Generic.List{System.Byte},System.Byte[])">
+            <summary>
+            Une simple méthode qui ajoute un tableau de byte à une liste de byte
+            </summary>
+            <param name="Liste"> La liste qui recevra le tableau de byte </param>
+            <param name="tab"> Le tableau de byte qu'on ajoutera à la liste </param>
+        </member>
+        <member name="M:PSI.MyImage.ConvertDonnee(System.Collections.Generic.List{System.Byte},System.String)">
+            <summary>
+            Methode qui va encoder les données du message 
+            </summary>
+            <param name="Liste"> On ajoutera les données à cette liste </param>
+            <param name="text"> message qui se fera encoder </param>
+        </member>
+        <member name="M:PSI.MyImage.DeconvertDonnee(System.Collections.Generic.List{System.Byte},System.Int32)">
+            <summary>
+            Methode qui va décrypter les données encodées 
+            </summary>
+            <param name="chaine"> La liste qui contient la chaine de bits </param>
+            <param name="NbCarac"> Le nombre de caractère que contient le message </param>
+            <returns> Le message que le QRcode contient </returns>
+        </member>
+        <member name="M:PSI.MyImage.TableauTranslate">
+            <summary>
+            Un simple tableau pour se retrouver dans l'encodage du message, on retrouvera chaque lettre correspondante à l'aide de son index
+            </summary>
+            <returns> Le tableau en question </returns>
+        </member>
+        <member name="M:PSI.MyImage.TranslateCharToInt(System.Char)">
+            <summary>
+            Methode qui va permettre à l'aide du tableau de traduction de traduire un char en int en renvoyant son index
+            </summary>
+            <param name="c"> Le caractère à traduire </param>
+            <returns> index du caractère </returns>
+        </member>
+        <member name="M:PSI.MyImage.TranslateIntToChar(System.Int32)">
+            <summary>
+            Methode qui va traduire un int en char à l'aide du tableauTranslate via son index
+            </summary>
+            <param name="value"> valeur à traduire mais aussi index </param>
+            <returns> valeur du tableau à tel index </returns>
+        </member>
+        <member name="M:PSI.MyImage.ConvertBiToInt(System.Byte[])">
+            <summary>
+            Methode qui va convertir un binaire en entier
+            </summary>
+            <param name="tab"> binaire représenté par un tableau de byte </param>
+            <returns> l'entier traduit du binaire </returns>
+        </member>
+        <member name="M:PSI.MyImage.ConvertIntToBi(System.Int32,System.Int32)">
+            <summary>
+            Methode qui va convertir un entier en binaire representé par un tableau de byte
+            </summary>
+            <param name="val"> entier à traduire </param>
+            <param name="taille"> taille de la chaine de binaire qu'on voudra retourner </param>
+            <returns> binaire retourné representé par un tableau de byte </returns>
+        </member>
+        <member name="M:PSI.MyImage.IndicNbCarac(System.Collections.Generic.List{System.Byte},System.String)">
+            <summary>
+            Methode qui va ajouter à une liste l'indicateur du nombre de caractère
+            </summary>
+            <param name="Liste"> liste qui contient la chaîne de données en bits </param>
+            <param name="mess"> message crypté par le QR code</param>
+        </member>
+        <member name="M:PSI.MyImage.TerminaisonAnd8(System.Collections.Generic.List{System.Byte},System.Int32)">
+            <summary>
+            Methode qui va s'occuper d'ajouter à notre liste la terminaison + les bits qu'il faut pour en faire un multiple de 8 
+            + ajout du pattern pour remplir le reste + code de la correction d'erreur
+            </summary>
+            <param name="Liste"> liste qui se verra ajouter tous les éléments ci dessus </param>
+            <param name="version"> version du qrcode car la taille varie en fonction de la varie </param>
+        </member>
+        <member name="M:PSI.MyImage.DessinQRmodule(System.Int32,System.Int32,System.Int32,PSI.Pixel,PSI.Pixel[0:,0:])">
+            <summary>
+            Methode qui va permettre de dessiner un module avec la couleur de notre choix
+            </summary>
+            <param name="moduleLength"> taille du module afin de pouvoir colorier chaque pixel </param>
+            <param name="i"> coordonnée en abcisee du module </param>
+            <param name="j"> coordonnée en ordonnée du module </param>
+            <param name="color"> la couleur de notre choix </param>
+            <param name="qrCode"> la matrice de pixels du QR code </param>
+        </member>
+        <member name="M:PSI.MyImage.Testmodule(System.Int32,System.Int32,System.Int32,PSI.Pixel[0:,0:])">
+            <summary>
+            Methode qui vérifie si le module correspondant est "libre" càd s'il n'est ni bleu ni noir ni blanc
+            </summary>
+            <param name="moduleLength"> la taille du module en pixel </param>
+            <param name="i"> coordonnée en abscisse </param>
+            <param name="j"> coordonnée en ordonnée </param>
+            <param name="qrCode">la matrice de pixels du QR code </param>
+            <returns> booléen qui est vraie si le module est libre </returns>
+        </member>
+        <member name="M:PSI.MyImage.ParcourirQR(System.Int32,System.Int32,System.Collections.Generic.List{System.Byte},PSI.Pixel[0:,0:])">
+            <summary>
+            Méthode qui va dessiner les données encodées sur le QR code
+            </summary>
+            <param name="taille_version"> la taille du qrcode en terme de module </param>
+            <param name="moduleLength"> la taille d'un module </param>
+            <param name="chaine"> la liste qui contient les données encodées </param>
+            <param name="qrCode">la matrice de pixels du QR code</param>
+        </member>
+        <member name="M:PSI.MyImage.DessinQRcode(System.String)">
+            <summary>
+            Methode principale qui réunira toutes les autres méthodes afin de pouvoir dessiner le QRcode 
+            </summary>
+            <param name="message"> message que l'on veut encoder dans un QR Code</param>
+            <returns>Retourne l'instance de MyImage contenant le QR code</returns>
+        </member>
+        <member name="M:PSI.MyImage.DetectionModule(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Méthode qui permet de capturer la couleur d'un module, il renvoie un 1 s'il est noir, un 0 s'il est blanc et un 2 si c'est autre
+            </summary>
+            <param name="moduleLength"> taille du module </param>
+            <param name="i"> coordonnée en abscisse </param>
+            <param name="j"> coordonnée en ordonnée </param>
+            <returns> le bit correspondant à la couleur du module </returns>
+        </member>
+        <member name="M:PSI.MyImage.DetectionRecherche(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Méthode qui permet de de vérifier si un carré correspond à un module de recherche
+            </summary>
+            <param name="moduleLength"> taille du module </param>
+            <param name="i"> coordonnée en abscisse </param>
+            <param name="j"> coorodnnée en ordonnée </param>
+            <returns> un booléen qui dit si oui on non le carré correspond à un module </returns>
+        </member>
+        <member name="M:PSI.MyImage.CacherPatterns(System.Int32,System.Int32)">
+            <summary>
+            Méthode qui va permettre de colorier tous les patterns en bleu et ne laisser que le message visible afin de faciliter la lecture de celui ci
+            Elle va aussi permettre de récupérer les données du masque
+            </summary>
+            <param name="moduleLength"> taille d'un module </param>
+            <param name="taille_version"> taille du qr code en module </param>
+            <returns> Les données du masque </returns>
+        </member>
+        <member name="M:PSI.MyImage.Detection_messageQR(System.Int32,System.Int32)">
+            <summary>
+            Méthode qui va maintenant récupérer la chaine de bits pour les données contenu par le qrcode
+            Simple variation de la méthode ParcourirQR
+            </summary>
+            <param name="taille_version"> taille du qr code en terme de module </param>
+            <param name="moduleLength"> taille du module </param>
+            <returns> une liste de byte qui correspond à la chaine de bits </returns>
+        </member>
+        <member name="M:PSI.MyImage.Demask(System.Int32,System.Int32)">
+            <summary>
+            Méthode qui va permettre d'enlever le masque 0 afin de faciliter la lecture du message
+            </summary>
+            <param name="moduleLength"> taille d'un module </param>
+            <param name="taille_version"> taille d'un qrcode en terme de module </param>
+        </member>
+        <member name="M:PSI.MyImage.DetectionQR">
+            <summary>
+            Méthode principale pour le décryptage de QR code
+            </summary>
+            <returns> le message crypté du QR code </returns>
+        </member>
+        <member name="T:PSI.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:PSI.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:PSI.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,33 @@
+﻿<Application x:Class="PSI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PSI"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Header text style -->
+        <Style x:Key="headerTextStyle">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Arial"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Label.FontSize" Value="22"></Setter>
+            <Setter Property="Label.Foreground" Value="Black"></Setter>
+        </Style>
+        <!-- radioButtonStyle style -->
+        <Style x:Key="radioButtonTextStyle">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Arial"></Setter>
+            <Setter Property="Label.FontSize" Value="20"></Setter>
+            <Setter Property="Label.Foreground" Value="Black"></Setter>
+        </Style>
+        <!-- buttonStyle style -->
+        <Style x:Key="buttonTextStyle">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Arial"></Setter>
+            <Setter Property="Label.FontSize" Value="20"></Setter>
+            <Setter Property="Label.Foreground" Value="Black"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

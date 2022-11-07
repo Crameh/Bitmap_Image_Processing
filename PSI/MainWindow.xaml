@@ -1,0 +1,39 @@
+﻿<Window x:Class="PSI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PSI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="525" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Border Background="DeepSkyBlue" Grid.Column="1" Grid.Row="1"/>
+        <Border Background="DeepSkyBlue" Grid.Column="1" Grid.Row="0"/>
+        <Border Background="DeepSkyBlue" Grid.Column="1" Grid.Row="3"/>
+        <Border Background="RoyalBlue" Grid.Column="0" Grid.Row="0"/>
+        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}" >Liste des fonctionnalités</Label>
+        <Label Grid.Column="0" Style="{StaticResource headerTextStyle}" >Projet Scientifique Informatique A2</Label>
+        <Label Grid.Column="0" Grid.Row="2" Style="{StaticResource headerTextStyle}" >Réalisé par MOUTY Guillaume et HE Marc</Label>
+        <Line X1="500" Y1="0" X2="500" Y2="600" Stroke="Black" StrokeThickness="10" Grid.RowSpan="3" />
+        <Line X1="0" Y1="100" X2="580" Y2="100" Stroke="Black" StrokeThickness="6" Grid.Column="0" Grid.RowSpan="3"/>
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="400">
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0" Name="Nuances">Nuances de couleurs</RadioButton>
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0" Name="Deformation">Déformation d'images</RadioButton>
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0" Name="Filtre">Appliquer un filtre</RadioButton>
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0" Name="Fractales">Fractales</RadioButton>
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0" Name="Histogramme">Histogramme</RadioButton>
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0" Name="Cacher">Cacher une image</RadioButton>
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0" Name="QRCode">QR Code</RadioButton>
+        </StackPanel>
+        <Button Style="{StaticResource buttonTextStyle}" Grid.Column="1" Grid.Row="2" Height="50" Width="200" Click="ChoisirPage">Choisir cette page</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="PSI.Deformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PSI"
+        mc:Ignorable="d"
+        Title="Deformation" Height="525" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Border Background="DeepSkyBlue" Grid.Column="1" Grid.Row="1"/>
+        <Border Background="DeepSkyBlue" Grid.Column="1" Grid.Row="0"/>
+        <Border Background="DeepSkyBlue" Grid.Column="1" Grid.Row="3"/>
+        <Border Background="RoyalBlue" Grid.Column="0" Grid.Row="0"/>
+        <Label Grid.Column="0" Style="{StaticResource headerTextStyle}" >Déformation d'image</Label>
+        <Line X1="500" Y1="0" X2="500" Y2="600" Stroke="Black" StrokeThickness="10" Grid.RowSpan="3" />
+        <Line X1="0" Y1="100" X2="600" Y2="100" Stroke="Black" StrokeThickness="6" Grid.Column="0"/>
+        <Button Style="{StaticResource buttonTextStyle}" Grid.Column="1" Grid.Row="0" Height="50" Width="200" Name="ChercherImage" Click="ChargerImage" >Choisir une image</Button>
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="400">
+            <Label Style="{StaticResource radioButtonTextStyle}" >Fonctionnalités :</Label>
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0"  Name="Miroir">Effet Miroir</RadioButton>
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0" Name="Rotation">Rotation</RadioButton>
+            <TextBox HorizontalAlignment="Left" Margin="100,10,0,0" Height="20" Width="100" Name="angle" TextWrapping="Wrap" Text="Entrez l'angle ici"/>
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0" Name="Retrecir">Rétrecir</RadioButton>
+            <TextBox HorizontalAlignment="Left" Margin="100,10,0,0" Height="20" Width="100" Name="coeffR" TextWrapping="Wrap" Text="Entrez le coeff ici"/>
+            <RadioButton Style="{StaticResource radioButtonTextStyle}" HorizontalAlignment="Left" Margin="100,20,0,0" Name="Agrandir">Agrandir</RadioButton>
+            <TextBox HorizontalAlignment="Left" Margin="100,10,0,0" Height="20" Width="100" Name="coeffA" TextWrapping="Wrap" Text="Entrez le coeff ici"/>
+        </StackPanel>
+        <Button Style="{StaticResource buttonTextStyle}" Grid.Column="1" Grid.Row="2" Height="50" Width="150" Click="Appliquer">Appliquer</Button>
+        <Button Style="{StaticResource buttonTextStyle}" Grid.Column="0" Grid.Row="2" Height="50" Width="200" HorizontalAlignment="Left" Margin="20,0,0,0" Click="Retour">Retour à l'accueil</Button>
+        <Button Style="{StaticResource buttonTextStyle}" Grid.Column="0" Grid.Row="2" Height="50" Width="200" HorizontalAlignment="Right" Margin="0,0,20,0" Click="Save">Sauvegarder</Button>
+        <Image Grid.Column="0"  Grid.Row="1" HorizontalAlignment="Center" Stretch="Uniform"  Name="ImageViewer"/>
+    </Grid>
+</Window>

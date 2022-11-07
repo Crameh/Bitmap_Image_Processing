@@ -1,0 +1,39 @@
+﻿<Window x:Class="PSI.Cacher"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PSI"
+        mc:Ignorable="d"
+        Title="Cacher" Height="625" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="500"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Border Background="DeepSkyBlue" Grid.Column="1" Grid.Row="1"/>
+        <Border Background="DeepSkyBlue" Grid.Column="1" Grid.Row="0"/>
+        <Border Background="DeepSkyBlue" Grid.Column="1" Grid.Row="2"/>
+        <Border Background="DeepSkyBlue" Grid.Column="1" Grid.Row="3"/>
+        <Border Background="RoyalBlue" Grid.Column="0" Grid.Row="0"/>
+        <Label Grid.Column="0" Style="{StaticResource headerTextStyle}" >Cacher une image dans une autre</Label>
+        <Line X1="500" Y1="0" X2="500" Y2="625" Stroke="Black" StrokeThickness="10" Grid.RowSpan="4" />
+        <Line X1="0" Y1="100" X2="600" Y2="100" Stroke="Black" StrokeThickness="6" Grid.Column="0"/>
+        <Button Style="{StaticResource buttonTextStyle}" Grid.Column="1" Grid.Row="0" Height="50" Width="200" Click="Charger2Images" >Choisir deux images</Button>
+        <Button Style="{StaticResource buttonTextStyle}" Grid.Column="1" Grid.Row="3" Height="50" Width="150" HorizontalAlignment="Left" Margin="50,0,0,0" Click="CacherImage">Cacher</Button>
+        <Button Style="{StaticResource buttonTextStyle}" Grid.Column="1" Grid.Row="3" Height="50" Width="150" HorizontalAlignment="Right" Margin="0,0,50,0" Click="DevoilerImage">Dévoiler</Button>
+        <Button Style="{StaticResource buttonTextStyle}" Grid.Column="0" Grid.Row="3" Height="50" Width="200" HorizontalAlignment="Left" Margin="20,0,0,0" Click="Retour">Retour à l'accueil</Button>
+        <Button Style="{StaticResource buttonTextStyle}" Grid.Column="0" Grid.Row="3" Height="50" Width="200" HorizontalAlignment="Right" Margin="0,0,20,0" Click="Save">Sauvegarder</Button>
+        <Image Grid.Column="0"  Grid.Row="1" HorizontalAlignment="Center" Stretch="Uniform" Name="ImageViewer"/>
+        <Image Grid.Column="0"  Grid.Row="2" HorizontalAlignment="Center" Stretch="Uniform" Name="ImageViewer2"/>
+        <Image Grid.Column="1"  Grid.Row="1" HorizontalAlignment="Center" Stretch="Uniform" Name="Coder"/>
+        <Image Grid.Column="1"  Grid.Row="2" HorizontalAlignment="Center" Stretch="Uniform" Name="Decoder" />
+        <Line X1="0" Y1="300" X2="1000" Y2="300" Stroke="Black" StrokeThickness="6" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+    </Grid>
+</Window>

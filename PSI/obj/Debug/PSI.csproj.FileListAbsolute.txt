@@ -1,0 +1,61 @@
+C:\Guillaume\Année2\PSI\PSI\PSI\bin\Debug\PSI.exe.config
+C:\Guillaume\Année2\PSI\PSI\PSI\bin\Debug\PSI.exe
+C:\Guillaume\Année2\PSI\PSI\PSI\bin\Debug\PSI.pdb
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\PSI.csprojAssemblyReference.cache
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\MainWindow.g.cs
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\App.g.cs
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\PSI_MarkupCompile.cache
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\PSI_MarkupCompile.lref
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\App.baml
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\MainWindow.baml
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\PSI.g.resources
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\PSI.Properties.Resources.resources
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\PSI.csproj.GenerateResource.cache
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\PSI.exe
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\PSI.pdb
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Nuances.g.cs
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Nuances.baml
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Deformation.g.cs
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Deformation.baml
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Filtre.g.cs
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Filtre.baml
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Fractale.g.cs
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Fractale.baml
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Histogramme.g.cs
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Histogramme.baml
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Cacher.g.cs
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\Cacher.baml
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\QrCode.g.cs
+C:\Guillaume\Année2\PSI\PSI\PSI\obj\Debug\QrCode.baml
+C:\Guillaume\Année2\PSI\PSI\PSI\bin\Debug\PSI.xml
+C:\Guillaume\Année 2\PSI\PSI\PSI\bin\Debug\PSI.exe.config
+C:\Guillaume\Année 2\PSI\PSI\PSI\bin\Debug\PSI.xml
+C:\Guillaume\Année 2\PSI\PSI\PSI\bin\Debug\PSI.exe
+C:\Guillaume\Année 2\PSI\PSI\PSI\bin\Debug\PSI.pdb
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\PSI.csproj.AssemblyReference.cache
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Cacher.g.cs
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Deformation.g.cs
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Filtre.g.cs
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Fractale.g.cs
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Histogramme.g.cs
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\MainWindow.g.cs
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Nuances.g.cs
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\QrCode.g.cs
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\App.g.cs
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\PSI_MarkupCompile.cache
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\PSI_MarkupCompile.lref
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\App.baml
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Cacher.baml
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Deformation.baml
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Filtre.baml
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Fractale.baml
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Histogramme.baml
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\MainWindow.baml
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\Nuances.baml
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\QrCode.baml
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\PSI.g.resources
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\PSI.Properties.Resources.resources
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\PSI.csproj.GenerateResource.cache
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\PSI.csproj.CoreCompileInputs.cache
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\PSI.exe
+C:\Guillaume\Année 2\PSI\PSI\PSI\obj\Debug\PSI.pdb
